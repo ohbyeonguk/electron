@@ -1,0 +1,11 @@
+version: 0.0.0
+files:
+  - url: web_health_checks-0.0.0-arm64-mac.zip
+    sha512: UUCl1Ezlv+q//wPkBRhzoOLsGF+ydD8CoEtrIL99MDf2nTmKj6/7Gfat1pd6dW4NBaSYCnGFJnfA8n4aA5zFqw==
+    size: 85463079
+  - url: web_health_checks-0.0.0-arm64.dmg
+    sha512: NTu2HCJnCyJcWPjpNjEtoaWTg9rJqK6O9DuZKxt16qu+tWm2vPoPFRFgQfTpUurCaq0IZl3Bdq2ShKHXF3E00A==
+    size: 88798512
+path: web_health_checks-0.0.0-arm64-mac.zip
+sha512: UUCl1Ezlv+q//wPkBRhzoOLsGF+ydD8CoEtrIL99MDf2nTmKj6/7Gfat1pd6dW4NBaSYCnGFJnfA8n4aA5zFqw==
+releaseDate: '2023-04-17T06:00:10.881Z'
