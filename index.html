@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./js/common.js" type="text/javascript"></script>
+    <style>
+table {border-collapse:collapse;border-spacing:0;}
+th {border:1px solid #e5e5e5;background:#f6f6f6;color:#111;text-align:center;line-height:22px;letter-spacing:-0.8px;font-weight:500;padding:18px;font-size:16px;}
+td {padding:20px;font-size:14px;color:#454545;letter-spacing:-0.7px;line-height:20px;border:1px solid #e5e5e5;}
+.lv {background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGw9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPjxtZXRhZGF0YT4gUHJvZHVjZWQgYnkgT21uaUdyYWZmbGUgNi42LjEgPGRjOmRhdGU+MjAxNi0xMS0xNiAwODozNTo0OSArMDAwMDwvZGM6ZGF0ZT48L21ldGFkYXRhPjxkZWZzLz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS1vcGFjaXR5PSIxIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBmaWxsPSJub25lIiBmaWxsLW9wYWNpdHk9IjEiPjx0aXRsZT5DYW52YXMgMTE8L3RpdGxlPjxnPjx0aXRsZT5MYXllciAxPC90aXRsZT48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iOCIgZmlsbD0iIzI4Yzk0MCIvPjwvZz48L2c+PC9zdmc+);background-repeat:no-repeat;background-position:center center;}
+.lvError {background-color:red;}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>서비스 상태 확인</h1>
+        <h2>마지막 로드 시간 : <span id="time"></span> /  총 : <span id="total"></span> / 정상 : <span id="success"></span> / 비정상 : <span id="fail"></span></h2>
+        <table class="api_status">
+            <colgroup>
+                <col width="180px">
+                <col width="200px">
+                <col width="500px">
+                <col width="75px">
+                <col width="100px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align:left">서비스</th>
+                    <th style="text-align:left">항목</th>
+                    <th style="text-align:left">URL</th>
+                    <th>상태</th>
+                    <th>응답</th>
+                </tr>
+            </thead>
+            <tbody id="tbl">    
+            </tbody>
+        </table>	
+	</div>
+    <script>
+$(document).ready(function(){
+    statusCheck();
+});
+setInterval(() => {
+    statusCheck();
+}, 60000)
+    </script>
+</body>
+</html>
